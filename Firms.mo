@@ -20,7 +20,11 @@ Real M2(start=M0_2);
 
 equation
 //для первого случая
-der(M1) = M1 - (b/c1)*M1*M2 - (a1/c1)*M1*M1;
+//der(M1) = M1 - (b/c1)*M1*M2 - (a1/c1)*M1*M1;
+//der(M2) = (c2/c1)*M2 - (b/c1)*M1*M2 - (a2/c1)*M2*M2;
+
+//для второго случая
+der(M1) = M1 - ((b/c1) + 0.00017)*M1*M2 - (a1/c1)*M1*M1;
 der(M2) = (c2/c1)*M2 - (b/c1)*M1*M2 - (a2/c1)*M2*M2;
 
 end Firms;
